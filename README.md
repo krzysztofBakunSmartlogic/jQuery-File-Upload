@@ -1,4 +1,15 @@
-# jQuery File Upload Plugin
+# jQuery File Upload Plugin - AngularJS Fork
+
+This is a fork of [Blueimp File Upload](https://github.com/blueimp/jQuery-File-Upload) with improved angular integration.
+Additionally all js files are bundled into dist/.
+
+The whole plugin has been bundled into a angular directive which can be changed via html attributes.
+
+## Usage
+
+```
+<ng-upload-form url="//jquery-file-upload.appspot.com/" auto-upload="true" size-limit="500000"></ng-upload-form>
+```
 
 ## Demo
 [Demo File Upload](http://blueimp.github.io/jQuery-File-Upload/)

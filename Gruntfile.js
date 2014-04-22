@@ -30,6 +30,7 @@ module.exports = function (grunt) {
         concat: {
           dist: {
             src: [
+              'js/vendor/jquery.ui.widget.js',
               'js/jquery.iframe-transport.js',
               'js/jquery.fileupload.js',
               'js/jquery.fileupload-process.js',
