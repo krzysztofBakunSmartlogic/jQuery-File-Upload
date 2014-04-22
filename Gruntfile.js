@@ -26,12 +26,38 @@ module.exports = function (grunt) {
                 'server/node/server.js',
                 'test/test.js'
             ]
+        },
+        concat: {
+          dist: {
+            src: [
+              'js/jquery.iframe-transport.js',
+              'js/jquery.fileupload.js',
+              'js/jquery.fileupload-process.js',
+              'js/jquery.fileupload-image.js',
+              'js/jquery.fileupload-audio.js',
+              'js/jquery.fileupload-video.js',
+              'js/jquery.fileupload-validate.js',
+              'js/jquery.fileupload-angular.js',
+              'js/app.js'
+              ],
+            dest: 'dist/uploader.js'
+          }
+        },
+        uglify: {
+          dist: {
+            files: {
+              'dist/uploader.min.js': ['dist/uploader.js']
+            }
+          }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-bump-build-git');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('build', ['concat', 'uglify']);
     grunt.registerTask('default', ['test']);
 
 };
