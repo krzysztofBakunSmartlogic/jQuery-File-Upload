@@ -1,8 +1,8 @@
 {
-  "name": "blueimp-file-upload",
-  "version": "9.5.7",
-  "title": "jQuery File Upload",
-  "description": "File Upload widget with multiple file selection, drag&amp;drop support, progress bar, validation and preview images, audio and video for jQuery. Supports cross-domain, chunked and resumable file uploads. Works with any server-side platform (Google App Engine, PHP, Python, Ruby on Rails, Java, etc.) that supports standard HTML form file uploads.",
+  "name": "angular-jqfile-upload",
+  "version": "1.0.0",
+  "title": "angular jQuery File Upload",
+  "description": "Fork of blueimp jquery file upload File Upload widget with multiple file selection, drag&amp;drop support, progress bar, validation and preview images, audio and video for jQuery. Supports cross-domain, chunked and resumable file uploads. Works with any server-side platform (Google App Engine, PHP, Python, Ruby on Rails, Java, etc.) that supports standard HTML form file uploads.",
   "keywords": [
     "jquery",
     "file",
@@ -24,22 +24,28 @@
     "php",
     "bootstrap"
   ],
-  "homepage": "https://github.com/blueimp/jQuery-File-Upload",
-  "author": {
-    "name": "Sebastian Tschan",
-    "url": "https://blueimp.net"
-  },
-  "maintainers": [
+  "homepage": "https://github.com/DominicBoettger/jQuery-File-Upload",
+  "authors": [
     {
       "name": "Sebastian Tschan",
       "url": "https://blueimp.net"
+    },
+    {
+      "name": "Dominic Böttger",
+      "url": "http://inspirationlabs.com"
+    },
+  ]
+  "maintainers": [
+    {
+      "name": "Dominic Böttger",
+      "url": "https://github.com/DominicBoettger"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/blueimp/jQuery-File-Upload.git"
+    "url": "git://github.com/DominicBoettger/jQuery-File-Upload.git"
   },
-  "bugs": "https://github.com/blueimp/jQuery-File-Upload/issues",
+  "bugs": "https://github.com/DominicBoettger/jQuery-File-Upload/issues",
   "licenses": [
     {
       "type": "MIT",
@@ -47,7 +53,6 @@
     }
   ],
   "dependencies": {
-    "jquery": ">=1.6",
     "blueimp-tmpl": ">=2.5.3",
     "blueimp-load-image": ">=1.11.0",
     "blueimp-canvas-to-blob": ">=2.1.0",
@@ -75,7 +80,8 @@
     "js/jquery.fileupload-ui.js",
     "js/jquery.fileupload-jquery-ui.js",
     "js/jquery.fileupload-angular.js",
-    "js/jquery.iframe-transport.js"
+    "js/jquery.iframe-transport.js",
+    "js/app.js"
   ],
   "ignore": [
     "/*.*",
@@ -83,7 +89,6 @@
     "css/demo-ie8.css",
     "css/demo.css",
     "css/style.css",
-    "js/app.js",
     "js/main.js",
     "server",
     "test"
