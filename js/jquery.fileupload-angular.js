@@ -174,14 +174,14 @@
        * @param fileId
        */
       var removeFieldData = function removeFieldData(fieldName, fileId) {
-        angular.forEach(fieldData[fieldName], function(value, key) {
-          if(value && value._id) {
-            if(value._id == fileId) {
+        angular.forEach(fieldData[fieldName], function (value, key) {
+          if (value && value._id) {
+            if (value._id === fileId) {
               fieldData[fieldName].splice(key, 1);
             }
           }
         });
-      }
+      };
 
       /**
        * Register the field
@@ -190,10 +190,10 @@
        * @todo prefill with existing data
        */
       var registerField = function registerField(fieldName) {
-        if(!fieldData[fieldName]) {
+        if (!fieldData[fieldName]) {
           fieldData[fieldName] = [];
         }
-      }
+      };
 
       this.$get = [
         function () {
@@ -340,7 +340,8 @@
             data.dataType.indexOf('json') === data.dataType.length - 4) {
             try {
               data.result = angular.fromJson(data.jqXHR.responseText);
-            } catch (ignore) {}
+            } catch (ignore) {
+            }
           }
         }).on([
           'fileuploadadd',
@@ -470,7 +471,8 @@
                 elm.prop('href')
               ].join(':')
             );
-          } catch (ignore) {}
+          } catch (ignore) {
+          }
         });
       };
     });
