@@ -52,12 +52,25 @@
               var fileObject = {
                 name: value.filename,
                 size: value.length,
-                url: '/file/' + value._id,
-                thumbnailUrl: '/file/' + value._id,
-                deleteUrl: '/file/' + value._id,
+                url: value.url,
+                thumbnailUrl: value.url,
+                deleteUrl: value.url,
                 deleteType: 'DELETE',
                 result: value
               };
+
+              if (fileObject.url && fileObject.url.charAt(0) !== '/') {
+                fileObject.url = '/'+fileObject.url;
+              }
+
+              if (fileObject.deleteUrl && fileObject.deleteUrl.charAt(0) !== '/') {
+                fileObject.deleteUrl = '/'+fileObject.deleteUrl;
+              }
+
+              if (fileObject.thumbnailUrl && fileObject.thumbnailUrl.charAt(0) !== '/') {
+                fileObject.thumbnailUrl = '/'+fileObject.thumbnailUrl;
+              }
+
               $scope.queue[key] = fileObject;
             });
           };
