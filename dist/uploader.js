@@ -3495,7 +3495,7 @@
     'blueimp.fileupload'
   ]);
 
-  app.directive('ngUploadForm', ['$rootScope', 'fileUpload', function () {
+  app.directive('ngUploadForm', [function () {
       return {
         restrict: 'E',
         templateUrl: './templates/fileform.html',
@@ -3507,7 +3507,8 @@
           ngModel: '=',
           name: '@'
         },
-        controller: function ($rootScope, $scope, $element, fileUpload) {
+        controller: ['$scope', '$element', 'fileUpload', function (
+            $scope, $element, fileUpload) {
           $scope.$on('fileuploaddone', function (e, data) {
             fileUpload.addFieldData($scope.name, data._response.result.files[0].result);
           });
@@ -3557,10 +3558,11 @@
           $scope.$watchCollection('filequeue', function (newval) {
             generateFileObject(newval);
           });
-        }
+        }]
       };
     }])
-    .controller('FileDestroyController', ['$rootScope', '$scope', '$http', 'fileUpload', function ($rootScope, $scope, $http, fileUpload) {
+    .controller('FileDestroyController', ['$scope', '$http', 'fileUpload', function (
+        $scope, $http, fileUpload) {
       var file = $scope.file,
         state;
 
