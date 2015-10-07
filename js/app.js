@@ -60,15 +60,15 @@
               };
 
               if (fileObject.url && fileObject.url.charAt(0) !== '/') {
-                fileObject.url = '/'+fileObject.url;
+                fileObject.url = '/' + fileObject.url;
               }
 
               if (fileObject.deleteUrl && fileObject.deleteUrl.charAt(0) !== '/') {
-                fileObject.deleteUrl = '/'+fileObject.deleteUrl;
+                fileObject.deleteUrl = '/' + fileObject.deleteUrl;
               }
 
               if (fileObject.thumbnailUrl && fileObject.thumbnailUrl.charAt(0) !== '/') {
-                fileObject.thumbnailUrl = '/'+fileObject.thumbnailUrl;
+                fileObject.thumbnailUrl = '/' + fileObject.thumbnailUrl;
               }
 
               $scope.queue[key] = fileObject;
