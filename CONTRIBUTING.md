@@ -37,6 +37,6 @@ Please follow these guidelines before sending a pull request:
 
 2. Follow the coding conventions of the original repository. Changes to one of the JavaScript source files are required to pass the [JSLint](http://jslint.com/) validation tool.
 
-3. Keep your commits as atomar as possible, i.e. create a new commit for every single bug fix or feature added.
+3. Keep your commits as atomic as possible, i.e. create a new commit for every single bug fix or feature added.
 
-4. Always add meaningfull commit messages.
+4. Always add meaningful commit messages.
